@@ -1,0 +1,193 @@
+.header
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  padding-top: 35px
+  padding-bottom: 35px
+  z-index: 3
+  background-color: #fff
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding-top: 8px
+    padding-bottom: 8px
+
+  &--fixed
+    position: fixed
+    padding-top: 8px
+    padding-bottom: 8px
+
+  .w
+    justify-content: space-between
+    display: flex
+    align-items: center
+    flex-direction: row
+
+  &__logo
+    margin-right: 12px
+
+    @media (max-width: $breakpoint-sm - 1)
+      height: 45px
+      margin-right: 0
+
+    svg
+      height: 100%
+      width: auto
+
+  &__contacts-left
+    white-space: nowrap
+    margin-right: 12px
+
+    @media (max-width: $breakpoint-sm - 1)
+      text-align: center
+      margin-top: 20px
+
+  &__email
+    //display: flex
+    font-size: 16px
+    font-weight: 500
+    margin-bottom: 14px
+
+    &:before
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      background: url(../img/sprite-email.svg)
+      margin-right: 12px
+      margin-top: -2px
+
+  &__subemail
+    font-size: 13px
+
+  &__menu
+    font-size: 15px
+    font-weight: 600
+    max-width: 600px
+    flex: 1
+    white-space: nowrap
+
+    @media (max-width: $breakpoint-sm - 1)
+      flex: 0
+
+    ul
+      display: flex
+      list-style: none
+      margin: 0
+      padding: 0
+      justify-content: space-between
+
+      @media (max-width: $breakpoint-sm - 1)
+        flex-direction: column
+
+    li
+      text-align: center
+      align-items: stretch
+
+      @media (max-width: $breakpoint-sm - 1)
+        margin-bottom: 8px
+
+    a
+      display: block
+      border-bottom: 2px solid transparent
+      padding-bottom: 14px
+      height: 100%
+      anim()
+
+      &:hover
+        border-bottom: 2px solid $green
+
+  &__contacts-right
+    white-space: nowrap
+    text-align: right
+    margin-left: 12px
+
+    @media (max-width: $breakpoint-sm - 1)
+      margin-left: 0
+
+  &__phone
+    font-size: 25px
+    font-weight: 600
+    margin-bottom: 17px
+
+    @media (max-width: $breakpoint-sm - 1)
+      display: none
+
+  &__order-btn
+    font-size: 13px
+    font-weight: 600
+    text-transform: uppercase
+    background-color: transparent
+    border: 0
+    margin: 0
+    padding: 0
+    cursor: pointer
+    outline: 0
+
+    &:hover
+      span
+        border-bottom: 2px solid transparent
+
+    span
+      display: inline-block
+      border-bottom: 2px solid $green
+      padding-bottom: 6px
+      anim()
+
+    &:before
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      background: url(../img/sprite-order-call.svg)
+      margin-right: 21px
+
+      @media (max-width: $breakpoint-sm - 1)
+        display: none
+
+  &__menu-btn
+    display: none
+    margin: 0
+    padding: 0
+    border: 0
+    background-color: transparent
+    background: url(../img/sprite-menu.svg)
+    cursor: pointer
+    outline: 0
+
+    @media (max-width: $breakpoint-sm - 1)
+      display: block
+
+  &__menu-close
+    display: none
+    position: absolute
+    right: 8px
+    top: 8px
+    padding: 0
+    margin: 0
+    background-color: transparent
+    border: 0
+    background: url(../img/sprite-close.svg);
+
+    @media (max-width: $breakpoint-sm - 1)
+      display: block
+
+  &__mobile-menu
+    display: flex
+    flex: 1
+    align-items: center
+    justify-content: space-around
+    flex-wrap: wrap
+
+    @media (max-width: $breakpoint-sm - 1)
+      position: fixed
+      flex-direction: column-reverse
+      justify-content: flex-end
+      padding-top: 70px
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: #fff
+      display: none
+
+    &--active
+      display: flex

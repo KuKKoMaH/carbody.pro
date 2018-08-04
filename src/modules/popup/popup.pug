@@ -1,0 +1,22 @@
+mixin popup(id, title, subtitle)
+  .popup__wrapper(id=id)
+    .popup__title=title
+    .popup__subtitle!=subtitle
+    .popup__body
+      if block
+        block
+
+mixin input(placeholder, search, select, textarea)
+  - var className = 'input' + (search ? ' input--search' : '') + (select ? ' input--select' : '') + (!placeholder ? ' input--nolabel' : '') + (textarea ? ' input--textarea' : '')
+  div(class=className)
+    if(textarea)
+      textarea.input__textarea(required)&attributes(attributes)
+    else if(select)
+      select.input__select(required)&attributes(attributes)
+        if (block)
+          block
+    else
+      input.input__input(value='' required)&attributes(attributes)
+    if(placeholder)
+      label.input__label= placeholder
+    .input__error

@@ -1,0 +1,63 @@
+.input
+  display: block
+  position: relative
+
+  &__input,
+  &__textarea
+    display: block
+    width: 100%
+    border: 0
+    outline: 0
+    border-bottom: 3px solid $green
+    font-size: 14px
+    line-height: 1.2
+    font-weight: 500
+    padding: 20px 0px 8px
+    margin-bottom: 30px
+    anim()
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+    &:focus,
+    &:valid,
+    &:disabled
+      border-bottom: 3px solid #D5D5D5
+      & ~ .input__label
+        top: 6px
+        font-size: 11px
+        color: $green
+
+
+  &__textarea
+    resize: none
+    max-width: 100%
+    min-width: 100%
+
+  &__label
+    display: block
+    position: absolute
+    color: #898989
+    font-size: 15px
+    font-weight: 500
+    left: 0px
+    top: 22px
+    pointer-events: none
+    anim()
+
+  &__error
+    position: absolute
+    top: 100%
+    left: 0
+    font-size: 13px
+    font-weight: 300
+    color: #e94c36
+
+  &--error
+    .input__input,
+    .selectize-input
+      border: 1px solid #E94C36
+      color: #e94c36
+
+    .input__label
+      color: #e94c36

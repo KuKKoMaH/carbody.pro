@@ -1,0 +1,13 @@
+include popup
+
++popup('part', 'Узнать точную стоимость на', 'Выберие вашу модель и введите контактые данные, мастер перезвонит вам и проконсультирует.')
+  form
+    .popup__row
+      .popup__select: select.form__select(data-placeholder='Марка' name='brand' data-type='brand' disabled)
+      .popup__select: select.form__select(data-placeholder='Модель' name='model' data-type='model' disabled)
+      .popup__select: select.form__select(data-placeholder='Поколение' name='generation' data-type='generation' disabled)
+    .popup__row
+      .popup__select: select.form__select(data-placeholder='Кузов' name='body' data-type='body' disabled)
+    +input('Ваше имя')()
+    +input('Номер телефона')(type='tel')
+    .center: button.button.button--inline ОТПРАВИТЬ ЗАЯВКУ

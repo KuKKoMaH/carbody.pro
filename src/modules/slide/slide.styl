@@ -1,0 +1,237 @@
+$breakpoint = 1170px
+
+.slide
+  overflow: hidden
+  padding-top: 165px
+  padding-bottom: 80px
+  position: relative
+  @media (max-width: $breakpoint-sm)
+    padding-top: 70px
+
+  &:after
+    content: ''
+    display: block
+    background: url(../img/sprite-bg1.svg)
+    position: absolute
+    left: 0
+    bottom: 20px
+
+    @media (max-width: $breakpoint-lg)
+      display: none
+
+  .w
+    position: relative
+
+    @media (max-width: $breakpoint)
+      display: block
+
+  &__left
+    padding-left: 165px
+    position: relative
+    z-index: 1
+
+    @media (max-width: $breakpoint)
+      padding: 0 10px
+
+  &__title
+    position: relative
+    font-size: 48px
+    font-weight: 500
+    margin: 0 0 28px
+    span
+      color: $green
+    @media (max-width: $breakpoint-sm)
+      font-size: 26px
+      margin-bottom: 16px
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      right: 100%
+      margin-right: 50px
+      top: 16px
+      width: 74px
+      height: 8px
+      background: $green
+
+      @media (max-width: $breakpoint)
+        display: none
+
+  &__subtitle
+    font-size: 22px
+    margin: 0 0 78px
+    @media (max-width: $breakpoint-sm)
+      font-size: 17px
+      margin-bottom: 26px
+
+  &__bullets
+    font-size: 16px
+    line-height: 1.55
+    font-weight: 500
+    @media (max-width: $breakpoint-sm)
+      font-size: 15px
+
+  &__bullet
+    margin-bottom: 28px
+    position: relative
+    display: flex
+    align-items: center
+
+    &--1 .slide__icon:before
+      background: url(../img/sprite-bullet-1.svg)
+    &--2 .slide__icon:before
+      background: url(../img/sprite-bullet-2.svg)
+    &--3 .slide__icon:before
+      background: url(../img/sprite-bullet-3.svg)
+
+  &__icon
+    width: 75px
+
+    &:before
+      content: ''
+      display: block
+
+  &__right
+    position: absolute
+    //right: -30px
+    right: 10px
+    top: 0
+    margin: 0 -10px
+
+    @media (max-width: $breakpoint)
+      position: relative
+      align-self: center
+      right: 0
+
+  &__image
+    display: block
+
+    @media (max-width: $breakpoint)
+      display: none
+
+  &__overlay
+    background: url(../img/sprite-lines.svg)
+    position: absolute
+    bottom: -21px
+
+    @media (max-width: $breakpoint)
+      display: none
+
+
+  //&__items
+  //  position: absolute
+  //  bottom: 0
+
+  &__item
+    position: absolute
+    z-index: 2
+
+    @media (max-width: $breakpoint)
+      position: static
+      background: #F5F5F5
+      border-radius: 3px
+      padding: 35px 33px
+      margin: 0 9px
+
+
+    &:hover .slide__content
+      pointer-events: auto
+      opacity: 1
+
+    &:nth-child(1)
+      left: -78px;
+      top: 388px + 21px;
+    &:nth-child(2)
+      left: 103px
+      top: 387px + 21px;
+    &:nth-child(3)
+      left: 283px;
+      top: 388px + 21px;
+    &:nth-child(4)
+      left: 417px;
+      top: 384px + 21px;
+    &:nth-child(5)
+      left: 550px;
+      top: 382px + 21px;
+
+  &__name
+    color: $green
+    font-size: 18px
+    font-weight: 500
+    margin-bottom: 8px
+
+  &__content
+    white-space: nowrap
+    position: absolute
+    pointer-events: none
+    opacity: 0
+    anim()
+
+    @media (max-width: $breakpoint)
+      opacity: 1
+      position: static
+      pointer-events: all
+
+
+  &__from
+    display: inline-block
+    background: $green
+    color: #ffffff
+    font-size: 18px
+    line-height: 1
+    font-weight: 600
+    padding: 7px 10px
+    margin-bottom: 20px
+
+  &__price1,
+  &__price2
+    font-size: 13px
+    font-weight: 600
+    text-decoration: underline
+
+  &__price1
+    color: #000000
+    margin-bottom: 13px
+
+  &__price2
+    color: $green
+
+  &__line
+    &:before
+      content: ''
+      display: block
+      height: 1px
+      background: #DFDFDF
+      margin: 130px auto 0
+      max-width: $breakpoint-lg
+
+      @media (max-width: $breakpoint)
+        margin-top: 50px
+
+  &__button
+    width: 50px
+    height: 50px
+    border: 1px solid #CFCFCF
+    border-radius: 50%
+    padding: 0
+    background: #ffffff
+    margin: -25px auto 0
+    display: flex
+    align-items: center
+    justify-content: center
+    anim()
+    cursor: pointer
+    outline: 0
+
+    &:hover
+      background: $green
+      border-color: $green
+
+      svg
+        fill: #fff
+
+    svg
+      display: block
+      fill: $green
+      anim()

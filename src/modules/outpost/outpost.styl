@@ -1,0 +1,52 @@
+.outpost
+  margin-bottom: 70px
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    right: 0
+    margin-top: -50px
+    background: url(../img/sprite-background-4.svg)
+    @media (max-width: 1150px)
+      display: none
+
+  @media (max-width: $breakpoint-sm - 1)
+    margin-bottom: 0px
+    padding: 0 20px
+
+  &__item
+    flex: 1
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 30px
+
+  &__title
+    font-size: 21px
+    font-weight: 500
+    margin-bottom: 40px
+
+    span
+      color: $green
+
+  &__address,
+  &__phone
+    position: relative
+    font-size: 16px
+    padding-left: 45px
+    margin-bottom: 25px
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+
+  &__address
+    &:after
+      background: url(../img/sprite-address.svg)
+
+  &__phone
+    font-weight: 500
+    &:after
+      background: url(../img/sprite-phone-sm.svg)

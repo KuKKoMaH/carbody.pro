@@ -1,0 +1,18 @@
+header.header#header
+  .w.w-c
+    .header__logo: svg(width="94" height="90"): use(xlink:href="#logo")
+    .header__mobile-menu
+      button.header__menu-close
+      .header__contacts-left
+        .header__email mail@vseporogi.com
+        .header__subemail Принимаем заявки круглосуточно
+      .header__menu
+        ul
+          li: a(href='#form') Выбор элемента
+          li: a(href='#catalog') Каталог
+          li: a(href='#delivery') Доставка и оплата
+          li: a(href='#outpost') Контакты
+    .header__contacts-right
+      .header__phone 8 800 555-35-35
+      a.header__order-btn.popup__opener(href='#callback'): span заказать звонок
+    button.header__menu-btn

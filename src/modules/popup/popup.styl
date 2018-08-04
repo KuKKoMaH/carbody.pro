@@ -1,0 +1,34 @@
+.popup
+  &__wrapper
+    position: relative
+    max-width: 580px
+    margin: 0 auto
+    background: #ffffff
+    padding: 64px 80px
+    @media (max-width: 580px)
+      padding: 20px 32px
+
+    .mfp-close
+      right: 8px
+      top: 8px
+
+  &__title
+    text-align: center
+    font-size: 24px
+    font-weight: 500
+    margin-bottom: 10px
+
+  &__subtitle
+    text-align: center
+    font-size: 16px
+    line-height: 1.55
+    margin-bottom: 35px
+
+  &__row
+    display: flex
+    margin: 0 -15px 30px
+    @media (max-width: 580px)
+      flex-direction: column
+    > *
+      flex: 1
+      margin-bottom: 8px

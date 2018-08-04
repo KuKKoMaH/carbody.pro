@@ -1,0 +1,127 @@
+$breakpoint = 760px
+.info
+  margin: 0 auto 150px
+  max-width: 790px
+
+  @media (max-width: $breakpoint-sm - 1)
+    margin-bottom: 40px
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    margin-top: 80px
+    background: url(../img/sprite-background-3.svg)
+    @media (max-width: 1160px)
+      display: none
+
+  &__block
+    position: relative
+    background: #4a4a4a
+    border-radius: 2px
+    display: flex
+    align-items: center
+    margin-top: 53px
+    margin-bottom: 44px
+
+    @media (max-width: $breakpoint)
+      flex-direction: column-reverse
+
+    &:before
+      content: ''
+      display: block
+      width: 74px
+      height: 8px
+      background: $green
+      position: absolute
+      top: 50px
+      left: -50px
+
+      @media (max-width: $breakpoint)
+        display: none
+
+  &__text
+    color: #ffffff
+    font-size: 21px
+    line-height: 1.35
+    font-weight: 500
+    padding-left: 50px
+    flex: 1
+
+    @media (max-width: $breakpoint)
+      text-align: center
+      padding: 0
+      margin-bottom: 30px
+      font-size: 19px
+
+  &__image
+    margin-right: 30px
+    margin-top: -53px
+    margin-bottom: -56px
+
+    @media (max-width: $breakpoint)
+      margin-right: 20px
+      margin-top: -20px
+      margin-bottom: 15px
+
+
+  &__sub
+    font-size: 18px
+    font-weight: 500
+    margin-bottom: 40px
+    @media (max-width: $breakpoint)
+      text-align: center
+      padding: 0 20px
+
+  &__contacts
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @media (max-width: $breakpoint)
+      flex-direction: column
+      align-items: flex-start
+
+  &__phone
+    position: relative
+    font-size: 20px
+    font-weight: 500
+    margin-left: 58px
+    border-bottom: 2px solid $green
+    padding-bottom: 4px
+    @media (max-width: $breakpoint)
+      margin-bottom: 20px
+      margin-left: 84px
+
+    &:before
+      content: ''
+      display: block
+      background: url(../img/sprite-phone.svg)
+      position: absolute
+      left: -58px
+      top: -7px
+
+  &__works
+    position: relative
+    font-size: 17px
+    font-weight: 500
+    margin-left: 49px
+    @media (max-width: $breakpoint)
+      margin-bottom: 30px
+      margin-left: 84px
+
+    span
+      font-size: 15px
+
+    &:before
+      content: ''
+      display: block
+      background: url(../img/sprite-clock.svg)
+      position: absolute
+      left: -49px
+      top: 0px
+
+  &__button
+    @media (max-width: $breakpoint)
+      align-self: stretch
+      margin: 0 20px

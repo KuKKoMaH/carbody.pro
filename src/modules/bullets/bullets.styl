@@ -1,0 +1,73 @@
+.bullets
+  margin-bottom: 110px
+  position: relative
+  @media (max-width: $breakpoint-sm - 1)
+    margin-bottom: 60px
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    right: 0
+    bottom: -120px
+    background: url(../img/sprite-background-5.svg)
+    @media (max-width: 1250px)
+      display: none
+
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    @media (max-width: $breakpoint-sm - 1)
+      padding: 0 10px
+
+  &__item
+    width: 270px
+    margin-right: 70px
+    margin-bottom: 60px
+
+    @media (max-width: $breakpoint-sm - 1)
+      margin-right: 20px
+
+    &--1 .bullets__title:before
+      background: url(../img/sprite-bullets-1.svg)
+    &--2 .bullets__title:before
+      background: url(../img/sprite-bullets-2.svg)
+    &--3 .bullets__title:before
+      background: url(../img/sprite-bullets-3.svg)
+    &--4 .bullets__title:before
+      background: url(../img/sprite-bullets-4.svg)
+    &--5 .bullets__title:before
+      background: url(../img/sprite-bullets-5.svg)
+    &--6 .bullets__title:before
+      background: url(../img/sprite-bullets-6.svg)
+
+  &__title
+    position: relative
+    font-size: 17px
+    font-weight: 500
+    margin-bottom: 30px
+    //padding-left: 48px
+    display: flex
+    align-items: center
+
+    &:before
+      content: ''
+      display: block
+      margin-right: 15px
+      //position: absolute
+      //left: 0
+
+  &__text
+    font-size: 16px
+    line-height: 25px
+
+    a
+      color: $green
+      text-decoration: underline
+
+      &:hover
+        color: $green-light
+        text-decoration: none

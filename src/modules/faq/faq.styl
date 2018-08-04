@@ -1,0 +1,74 @@
+.faq
+  color: #ffffff
+  background: url(bg.jpg) 50% 50% no-repeat
+  background-size: cover
+  padding-top: 80px
+  padding-bottom: 96px
+  margin-bottom: 90px
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding-top: 30px
+    padding-bottom: 30px
+    margin-bottom: 50px
+
+  &__col
+    flex: 1
+
+  &__item
+    margin-bottom: 16px
+
+    &--active
+      .faq__question
+        background: #ffffff
+        color: #000
+
+        &:after
+          background: url(../img/sprite-minus.svg)
+
+
+  &__question
+    background: #2E2E2E
+    margin: 0px 8px
+    border-radius: 1px
+    height: 76px
+    padding: 0 60px 0 34px
+    font-size: 17px
+    font-weight: 500
+    display: flex
+    align-items: center
+    position: relative
+    cursor: pointer
+    anim()
+
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 15px
+      padding: 0 60px 0 16px
+
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      right: 30px
+      top: 50%
+      transform: translateY(-50%)
+      background: url(../img/sprite-plus.svg)
+
+  &__answer
+    max-height: 0
+    overflow: hidden
+    background: #ffffff
+    margin: 0px 8px
+    font-size: 16px
+    line-height: 27px
+    color: #000000
+    anim()
+
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 15px
+
+  &__text
+    padding: 4px 70px 35px 35px
+    @media (max-width: $breakpoint-sm - 1)
+      padding: 0 16px 20px
+

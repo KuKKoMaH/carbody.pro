@@ -1,0 +1,106 @@
+.footer
+  margin-bottom: 33px
+
+  &__line
+    &:before
+      content: ''
+      display: block
+      height: 1px
+      background: #DFDFDF
+      margin: 0px auto 15px
+      max-width: $breakpoint-lg
+
+      //@media (max-width: $breakpoint)
+      //  margin-top: 50px
+
+  &__button
+    width: 50px
+    height: 50px
+    border: 1px solid #CFCFCF
+    border-radius: 50%
+    padding: 0
+    background: #ffffff
+    margin: -40px auto 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    anim()
+    cursor: pointer
+    outline: 0
+
+    &:hover
+      background: $green
+      border-color: $green
+
+      svg
+        fill: #fff
+
+    svg
+      display: block
+      fill: $green
+      margin-top: -2px
+      transform: rotate(180deg)
+
+      anim()
+
+  &__container
+    justify-content: space-between
+    align-items: center
+    @media (max-width: $breakpoint-sm - 1)
+      flex-direction: column-reverse
+
+  &__logo
+    display: flex
+    align-items: center
+    @media (max-width: $breakpoint-sm - 1)
+      flex-direction: column
+      text-align: center
+
+  &__copyright
+    font-size: 11px
+    margin-left: 30px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-left: 0
+      margin-top: 20px
+
+  &__socials
+    text-align: center
+    font-size: 15px
+    font-weight: 500
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 40px
+
+  &__links
+    margin-top: 25px
+    display: flex
+    align-items: center
+    justify-content center
+    @media (max-width: $breakpoint-sm - 1)
+      margin-top: 8px
+
+    a
+      display: block
+      margin: 0 8px
+    svg
+      display: block
+      fill: $green
+      anim()
+
+      &:hover
+        fill: $green-light
+
+  &__contacts
+    text-align: right
+    @media (max-width: $breakpoint-sm - 1)
+      text-align: center
+      margin-bottom: 40px
+
+  &__phone
+    font-size: 25px
+    font-weight: 600
+    margin-bottom: 16px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 8px
+
+  &__sub
+    font-size: 14px

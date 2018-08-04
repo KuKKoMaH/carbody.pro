@@ -1,0 +1,101 @@
+.catalog
+  position: relative
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    right: 0
+    bottom: -130px
+    background: url(../img/sprite-background-2.svg)
+
+    @media (max-width: $breakpoint-lg)
+      display: none
+
+  .w
+    overflow: hidden
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+
+  &__item
+    width: 50%
+    margin-bottom: 21px
+
+    @media (max-width: 1170px)
+      width: 100%
+
+    &-inner
+      margin: 0 15px
+      background: #f6f6f6
+      display: flex
+      align-items: center
+
+      @media (max-width: 640px)
+        flex-direction: column
+        align-items: flex-start
+
+  &__image
+    position: relative
+    width: 315px
+
+    img
+      display: block
+      pointer-events: none
+
+  &__content
+    padding-right: 15px
+
+    @media (max-width: 640px)
+      padding: 0 20px 40px
+
+  &__price
+    position: absolute
+    top: 50px
+    left: 32px
+    background: $green
+    color: #ffffff
+    font-size: 18px
+    line-height: 1
+    font-weight: 600
+    padding: 7px 10px
+    margin-bottom: 20px
+
+    @media (max-width: 640px)
+      left: 0
+      top: 30px
+
+  &__title
+    font-size: 24px
+    font-weight: 600
+    margin-bottom: 34px
+
+    @media (max-width: 640px)
+      font-size: 18px
+      margin-bottom: 20px
+
+  &__text
+    font-size: 15px
+    font-weight: 500
+    line-height: 1.55
+    margin-bottom: 35px
+
+    @media (max-width: 640px)
+      margin-bottom: 20px
+
+  &__button
+    font-size: 16px
+    font-weight: 600
+    color: $green
+    background-color: transparent
+    margin: 0
+    padding: 0
+    border: 0
+    cursor: pointer
+    text-decoration: underline
+    outline: 0
+
+    &:hover
+      text-decoration: none

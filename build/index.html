@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carbody</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="all" href="style.css">
+    <!--link(rel="shortcut icon" href="/favicon.ico")-->
+  </head>
+  <body onunload="">
+    <header class="header" id="header">
+      <div class="w w-c">
+        <div class="header__logo">
+          <svg width="94" height="90">
+            <use xlink:href="#logo"></use>
+          </svg>
+        </div>
+        <div class="header__mobile-menu">
+          <button class="header__menu-close"></button>
+          <div class="header__contacts-left">
+            <div class="header__email">mail@vseporogi.com</div>
+            <div class="header__subemail">Принимаем заявки круглосуточно</div>
+          </div>
+          <div class="header__menu">
+            <ul>
+              <li><a href="#form">Выбор элемента</a></li>
+              <li><a href="#catalog">Каталог</a></li>
+              <li><a href="#delivery">Доставка и оплата</a></li>
+              <li><a href="#outpost">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__contacts-right">
+          <div class="header__phone">8 800 555-35-35</div><a class="header__order-btn popup__opener" href="#callback"><span>заказать звонок</span></a>
+        </div>
+        <button class="header__menu-btn"></button>
+      </div>
+    </header>
+    <div class="slide" id="top">
+      <div class="w">
+        <div class="slide__left">
+          <h1 class="slide__title">Кузовные элементы<br>по <span>низким ценам</span></h1>
+          <p class="slide__subtitle">Отправляем без предоплаты<br>по всей России</p>
+          <div class="slide__bullets">
+            <div class="slide__bullet slide__bullet--1">
+              <div class="slide__icon"></div>
+              <div class="slide__text">В наличии неокрашенные<br>и окрашенные элементы</div>
+            </div>
+            <div class="slide__bullet slide__bullet--2">
+              <div class="slide__icon"></div>
+              <div class="slide__text">Гарантия качества</div>
+            </div>
+            <div class="slide__bullet slide__bullet--3">
+              <div class="slide__icon"></div>
+              <div class="slide__text">Товар в наличии</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide__right"><img class="slide__image" src="img/img-car.jpg">
+          <div class="slide__overlay"></div>
+          <div class="slide__items">
+            <div class="slide__item">
+              <div class="slide__name">Капоты</div>
+              <div class="slide__content">
+                <div class="slide__from">от 2000.-</div>
+                <div class="slide__price1">Неокрашенный - 2000 р.</div>
+                <div class="slide__price2">Окрашенный - 2500 р.</div>
+              </div>
+            </div>
+            <div class="slide__item">
+              <div class="slide__name">Бампера</div>
+              <div class="slide__content">
+                <div class="slide__from">от 2000.-</div>
+                <div class="slide__price1">Неокрашенный - 2000 р.</div>
+                <div class="slide__price2">Окрашенный - 2500 р.</div>
+              </div>
+            </div>
+            <div class="slide__item">
+              <div class="slide__name">Фары</div>
+              <div class="slide__content">
+                <div class="slide__from">от 2000.-</div>
+                <div class="slide__price1">Неокрашенный - 2000 р.</div>
+                <div class="slide__price2">Окрашенный - 2500 р.</div>
+              </div>
+            </div>
+            <div class="slide__item">
+              <div class="slide__name">Крылья</div>
+              <div class="slide__content">
+                <div class="slide__from">от 2000.-</div>
+                <div class="slide__price1">Неокрашенный - 2000 р.</div>
+                <div class="slide__price2">Окрашенный - 2500 р.</div>
+              </div>
+            </div>
+            <div class="slide__item">
+              <div class="slide__name">Двери</div>
+              <div class="slide__content">
+                <div class="slide__from">от 2000.-</div>
+                <div class="slide__price1">Неокрашенный - 2000 р.</div>
+                <div class="slide__price2">Окрашенный - 2500 р.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide__line"><a class="slide__button" href="#form">
+          <svg width="22" height="15">
+            <use xlink:href="#arrow"></use>
+          </svg></a></div>
+    </div>
+    <div class="form" id="form">
+      <h2 class="title">Выберите автомобиль и запчасть</h2>
+      <h3 class="subtitle">После отправки заявки, мы перезвоним<br>вам в течение 5 минут.</h3>
+      <form class="form__wrapper">
+        <div class="form__row">
+          <div class="form__item">
+            <select class="form__select" data-placeholder="Марка" name="brand" data-type="brand" disabled=""></select>
+          </div>
+          <div class="form__item">
+            <select class="form__select" data-placeholder="Модель" name="model" data-type="model" disabled=""></select>
+          </div>
+          <div class="form__item">
+            <select class="form__select" data-placeholder="Поколение" name="generation" data-type="generation" disabled=""></select>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__item">
+            <select class="form__select" data-placeholder="Кузов" name="body" data-type="body" disabled=""></select>
+          </div>
+          <div class="form__item">
+            <select class="form__select" data-placeholder="Узел" name="part" data-type="part"></select>
+          </div>
+          <div class="form__item">
+            <div class="form__button">
+              <button class="button">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="catalog" id="catalog">
+      <h2 class="title">Кузовные элементы</h2>
+      <h3 class="subtitle">Выберите что вам необходимо</h3>
+      <div class="w">
+        <div class="catalog__items">
+          <div class="catalog__item">
+            <div class="catalog__item-inner">
+              <div class="catalog__image"><img src="img/modules-catalog-img-catalog-1.jpg">
+                <div class="catalog__price">от 2100.–</div>
+              </div>
+              <div class="catalog__content">
+                <div class="catalog__title">Передний бампер</div>
+                <div class="catalog__text">Неокрашенный - от 2 100 р.<br>
+                  Окрашенный - от 2 400 р.
+                </div>
+                <button class="catalog__button" data-type="Передний бампер">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-inner">
+              <div class="catalog__image"><img src="img/modules-catalog-img-catalog-2.jpg">
+                <div class="catalog__price">от 2100.–</div>
+              </div>
+              <div class="catalog__content">
+                <div class="catalog__title">Крыло</div>
+                <div class="catalog__text">Неокрашенный - от 2 100 р.<br>
+                  Окрашенный - от 2 400 р.
+                </div>
+                <button class="catalog__button" data-type="Крыло">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-inner">
+              <div class="catalog__image"><img src="img/modules-catalog-img-catalog-3.jpg">
+                <div class="catalog__price">от 2100.–</div>
+              </div>
+              <div class="catalog__content">
+                <div class="catalog__title">Двери передние</div>
+                <div class="catalog__text">Неокрашенный - от 2 100 р.<br>
+                  Окрашенный - от 2 400 р.
+                </div>
+                <button class="catalog__button" data-type="Двери передние">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-inner">
+              <div class="catalog__image"><img src="img/modules-catalog-img-catalog-4.jpg">
+                <div class="catalog__price">от 2100.–</div>
+              </div>
+              <div class="catalog__content">
+                <div class="catalog__title">Капот</div>
+                <div class="catalog__text">Неокрашенный - от 2 100 р.<br>
+                  Окрашенный - от 2 400 р.
+                </div>
+                <button class="catalog__button" data-type="Капот">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-inner">
+              <div class="catalog__image"><img src="img/modules-catalog-img-catalog-5.jpg">
+                <div class="catalog__price">от 2100.–</div>
+              </div>
+              <div class="catalog__content">
+                <div class="catalog__title">Задний бампер</div>
+                <div class="catalog__text">Неокрашенный - от 2 100 р.<br>
+                  Окрашенный - от 2 400 р.
+                </div>
+                <button class="catalog__button" data-type="Задний бампер">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-inner">
+              <div class="catalog__image"><img src="img/modules-catalog-img-catalog-6.jpg">
+                <div class="catalog__price">от 2100.–</div>
+              </div>
+              <div class="catalog__content">
+                <div class="catalog__title">Фары</div>
+                <div class="catalog__text">Неокрашенный - от 2 100 р.<br>
+                  Окрашенный - от 2 400 р.
+                </div>
+                <button class="catalog__button" data-type="Фары">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-inner">
+              <div class="catalog__image"><img src="img/modules-catalog-img-catalog-7.jpg">
+                <div class="catalog__price">от 2100.–</div>
+              </div>
+              <div class="catalog__content">
+                <div class="catalog__title">Двери задние</div>
+                <div class="catalog__text">Неокрашенный - от 2 100 р.<br>
+                  Окрашенный - от 2 400 р.
+                </div>
+                <button class="catalog__button" data-type="Двери задние">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="info__block">
+        <div class="info__text">В продаже имеются<br>передние и задние фары<br>на разные модели авто</div><img class="info__image" src="img/modules-info-info.png">
+      </div>
+      <div class="info__sub">Уточняйте наличие деталей по телефону:</div>
+      <div class="info__contacts">
+        <div class="info__phone">8 800 555-35-35</div>
+        <div class="info__works">9:00 – 22:00<br><span>Без выходных</span></div>
+        <div class="info__button"><a class="button popup__opener" href="#callback">ИЛИ ОТПРАВИТЕ ЗАПРОС</a></div>
+      </div>
+    </div>
+    <div class="bullets">
+      <div class="w">
+        <div class="bullets__items">
+          <div class="bullets__item bullets__item--1">
+            <div class="bullets__title">Цвет на выбор</div>
+            <div class="bullets__text">Предлагаем неокрашенную и окрашенную в заводской цвет кузова продукцию</div>
+          </div>
+          <div class="bullets__item bullets__item--2">
+            <div class="bullets__title">Склады</div>
+            <div class="bullets__text">Склад и офис в Москве и Санкт-Петербурге</div>
+            <div class="bullets__text"><a href="#outpost">Контакты</a></div>
+          </div>
+          <div class="bullets__item bullets__item--3">
+            <div class="bullets__title">Покраска и монтаж</div>
+            <div class="bullets__text">В Москве и Санкт-Петербурге оказываем услуги по покраске и монтажу элементов</div>
+          </div>
+          <div class="bullets__item bullets__item--4">
+            <div class="bullets__title">В наличии, на складе</div>
+            <div class="bullets__text">В базе более 8000 бамперов, крыльев и капотов, в наличии на складе</div>
+          </div>
+          <div class="bullets__item bullets__item--5">
+            <div class="bullets__title">Доставка</div>
+            <div class="bullets__text">Отправляем наложенным платежом во все регионы</div>
+          </div>
+          <div class="bullets__item bullets__item--6">
+            <div class="bullets__title">Качество</div>
+            <div class="bullets__text">Вся продукция выполнена из высококачественных материалов</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="delivery" id="delivery">
+      <h2 class="title">Доставка и оплата</h2>
+      <h3 class="subtitle">Отправляем заказ любыми транспортными компаниями</h3>
+      <div class="w delivery__items">
+        <div class="delivery__item"><img src="img/modules-delivery-delivery-1.png"></div>
+        <div class="delivery__item"><img src="img/modules-delivery-delivery-2.png"></div>
+        <div class="delivery__item"><img src="img/modules-delivery-delivery-3.png"></div>
+        <div class="delivery__item"><img src="img/modules-delivery-delivery-4.png"></div>
+        <div class="delivery__item"><img src="img/modules-delivery-delivery-5.png"></div>
+      </div>
+      <div class="w delivery__steps">
+        <div class="delivery__step">
+          <div class="delivery__label">1.</div>
+          <div class="delivery__title">Оставляете заявку</div>
+          <div class="delivery__text">Вы <a class="popup__opener" href="#callback">оставляете заявку</a>, мы<br>перезваниваем и уточняем<br>адрес</div>
+        </div>
+        <div class="delivery__step">
+          <div class="delivery__label">2.</div>
+          <div class="delivery__title">Отправляем</div>
+          <div class="delivery__text">Упаковываем и отправляем,<br>высылаем код отслеживания</div>
+        </div>
+        <div class="delivery__step">
+          <div class="delivery__label">3.</div>
+          <div class="delivery__title">Получаете</div>
+          <div class="delivery__text">Получаете, проверяете<br>и забираете</div>
+        </div>
+        <div class="delivery__step">
+          <div class="delivery__label">4.</div>
+          <div class="delivery__title">Оплачиваете</div>
+          <div class="delivery__text">Оплачиваете после<br>осмотра</div>
+        </div>
+      </div>
+    </div>
+    <div class="faq">
+      <h2 class="title">Вопросы и ответы</h2>
+      <h3 class="subtitle">Мы веделили основные вопросы, которые волнуют<br>клиентов перед заказом и разместили здесь:</h3>
+      <div class="w">
+        <div class="faq__col">
+          <div class="faq__item">
+            <div class="faq__question">Из какого металла вы делаете пороги?</div>
+            <div class="faq__answer">
+              <div class="faq__text">В приоритете холоднокатанная сталь толщиной 1-1,5 мм (1,5 мм по желанию заказчика, или если это целесообразно, например, авто активно эксплуатируется среди внедорожья). Как правило, 1 мм достаточно, так как оригинальные пороги имеют толщину 0,8 мм</div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__question">Из какого металла вы делаете пороги?</div>
+            <div class="faq__answer">
+              <div class="faq__text">В приоритете холоднокатанная сталь толщиной 1-1,5 мм (1,5 мм по желанию заказчика, или если это целесообразно, например, авто активно эксплуатируется среди внедорожья). Как правило, 1 мм достаточно, так как оригинальные пороги имеют толщину 0,8 мм</div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__question">Из какого металла вы делаете пороги?</div>
+            <div class="faq__answer">
+              <div class="faq__text">В приоритете холоднокатанная сталь толщиной 1-1,5 мм (1,5 мм по желанию заказчика, или если это целесообразно, например, авто активно эксплуатируется среди внедорожья). Как правило, 1 мм достаточно, так как оригинальные пороги имеют толщину 0,8 мм</div>
+            </div>
+          </div>
+        </div>
+        <div class="faq__col">
+          <div class="faq__item">
+            <div class="faq__question">Из какого металла вы делаете пороги?</div>
+            <div class="faq__answer">
+              <div class="faq__text">В приоритете холоднокатанная сталь толщиной 1-1,5 мм (1,5 мм по желанию заказчика, или если это целесообразно, например, авто активно эксплуатируется среди внедорожья). Как правило, 1 мм достаточно, так как оригинальные пороги имеют толщину 0,8 мм</div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__question">Из какого металла вы делаете пороги?</div>
+            <div class="faq__answer">
+              <div class="faq__text">В приоритете холоднокатанная сталь толщиной 1-1,5 мм (1,5 мм по желанию заказчика, или если это целесообразно, например, авто активно эксплуатируется среди внедорожья). Как правило, 1 мм достаточно, так как оригинальные пороги имеют толщину 0,8 мм</div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__question">Из какого металла вы делаете пороги?</div>
+            <div class="faq__answer">
+              <div class="faq__text">В приоритете холоднокатанная сталь толщиной 1-1,5 мм (1,5 мм по желанию заказчика, или если это целесообразно, например, авто активно эксплуатируется среди внедорожья). Как правило, 1 мм достаточно, так как оригинальные пороги имеют толщину 0,8 мм</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="outpost w" id="outpost">
+      <div class="outpost__item">
+        <div class="outpost__title">Пункт выдачи в <span>г. Москва</span></div>
+        <div class="outpost__address">ул. Комсомольская 3А</div>
+        <div class="outpost__phone">8 (495) 300-00-00</div>
+        <div class="outpost__phone">8 (926) 301-01-01</div>
+      </div>
+      <div class="outpost__item">
+        <div class="outpost__title">Пункт выдачи в <span>г.Санкт-Петербург</span></div>
+        <div class="outpost__address">Волхонское шоссе, 4А</div>
+        <div class="outpost__phone">8 (495) 300-00-00</div>
+        <div class="outpost__phone">8 (926) 301-01-01</div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__line"><a class="footer__button" href="#top">
+          <svg width="22" height="15">
+            <use xlink:href="#arrow"></use>
+          </svg></a></div>
+      <div class="w footer__container">
+        <div class="footer__logo">
+          <svg width="94" height="90">
+            <use xlink:href="#logo"></use>
+          </svg>
+          <div class="footer__copyright">2018 Carbody<br>
+            Все права защищены
+          </div>
+        </div>
+        <div class="footer__socials">Вступайте в наши сообщества: 
+          <div class="footer__links"><a href="#" target="_blank">
+              <svg width="26" height="17">
+                <use xlink:href="#vk"></use>
+              </svg></a><a href="#" target="_blank">
+              <svg width="18" height="19">
+                <use xlink:href="#inst"></use>
+              </svg></a><a href="#" target="_blank">
+              <svg width="130" height="19">
+                <use xlink:href="#drive2"></use>
+              </svg></a></div>
+        </div>
+        <div class="footer__contacts">
+          <div class="footer__phone">8 800 555-35-35</div>
+          <div class="footer__sub">Бесплатно со всех номеров</div>
+        </div>
+      </div>
+    </footer>
+    <div class="hidden"><svg xmlns="http://www.w3.org/2000/svg">
+    <symbol viewBox="0 0 94 90" id="logo">
+        <path d="M45.16,22.68l13-2L54.77,8.49,0,0,1.13,44.76l11.16-.11Q7.48,20,27.6,16.54C34.89,15.51,41.85,17.88,45.16,22.68Z" fill="#1caf5e"></path>
+        <path d="M31.88,21.49c8,0,13.23,5.7,13.94,11.11h-8a5.93,5.93,0,0,0-6-4.78c-4.69,0-7.2,4-7.2,8.85s2.85,8.93,7.24,8.93A6.17,6.17,0,0,0,38,40.35h8.29A14.38,14.38,0,0,1,31.71,51.92c-8.88,0-14.7-6.62-14.7-15.3S23.17,21.49,31.88,21.49Zm38.44,9.43V51h-6.7V48.61h-.25a6.77,6.77,0,0,1-6,3.06c-3,0-8.46-2.52-8.46-10.73,0-6.62,4.44-10.52,9-10.52a6.09,6.09,0,0,1,5.49,2.89h.25V30.92ZM56,41c0,2.43,1.17,4.57,3.85,4.57,2,0,3.69-1.84,3.69-4.53S62,36.41,59.89,36.41C57.29,36.41,56,38.72,56,41ZM90.42,30.54v6.62a19.17,19.17,0,0,0-3.1-.25c-3.64,0-4.94,2.14-4.94,4.86V51H75.3V30.92h6.83v3.44h.21a7.09,7.09,0,0,1,6.16-4A8.2,8.2,0,0,1,90.42,30.54Z"></path>
+        <path d="M1.79,79.61V49.24H8.54V61.51h.21a8.13,8.13,0,0,1,6-2.62c2.89,0,8.46,2.53,8.46,10.8,0,6.67-4.52,10.59-9.17,10.59a6,6,0,0,1-5.19-2.66H8.66v2Zm14.29-10c0-2.45-1.17-4.6-3.85-4.6-2,0-3.69,1.86-3.69,4.56s1.59,4.64,3.69,4.64C14.82,74.25,16.08,71.93,16.08,69.66Zm9.34-.17A10.41,10.41,0,0,1,36.14,58.73,10.37,10.37,0,0,1,46.87,69.49,10.56,10.56,0,0,1,36.14,80.33,10.53,10.53,0,0,1,25.42,69.49Zm7.08,0c0,2.62,1.42,4.51,3.64,4.51,2.39,0,3.64-1.94,3.64-4.51S38.62,65,36.14,65,32.5,67,32.5,69.53Zm38-13.85V79.61H63.75v-1.9h-.21a8.13,8.13,0,0,1-6,2.62c-2.89,0-8.46-2.57-8.46-10.84,0-6.67,4.52-10.76,9.17-10.76a6,6,0,0,1,5.19,2.66h.21v-5.7ZM56.21,69.53c0,2.45,1.17,4.64,3.85,4.64,2,0,3.69-1.9,3.69-4.6s-1.59-4.81-3.69-4.81C57.47,64.76,56.21,67.25,56.21,69.53ZM94,59.4,83.07,89.52H76.4l3.73-10.17-7.25-20h7.33l2.09,7a47.49,47.49,0,0,1,1.38,5.36h.17a45.69,45.69,0,0,1,1.26-5.36l2-7Z" fill="#1caf5e"></path>
+    </symbol>
+    <symbol viewBox="0 0 22 15" id="arrow">
+        <polygon points="21.5 3.73 18.34 0.5 10.99 8.04 3.66 0.5 0.5 3.73 9.42 12.88 10.99 14.5 12.58 12.88 21.5 3.73"></polygon>
+    </symbol>
+    <symbol viewBox="0 0 19 20" id="inst">
+        <path d="M11.3,9.81A1.85,1.85,0,1,0,9.46,11.7,1.87,1.87,0,0,0,11.3,9.81Zm2.6,0a4.5,4.5,0,0,1-4.45,4.54A4.5,4.5,0,0,1,5,9.81a4.6,4.6,0,0,1,.42-1.93H0v6.54a4.74,4.74,0,0,0,4.68,4.78H14a4.74,4.74,0,0,0,4.68-4.78V7.88H13.48A4.6,4.6,0,0,1,13.9,9.81ZM13.3,2.91a.53.53,0,0,1,.52-.53h1.61a.53.53,0,0,1,.52.53V4.55a.53.53,0,0,1-.52.53H13.82a.53.53,0,0,1-.52-.53ZM9.46,5.27A4.36,4.36,0,0,1,12,6.11h6.69V4.78A4.74,4.74,0,0,0,14,0H4.68A4.74,4.74,0,0,0,0,4.78V6.11H6.89A4.36,4.36,0,0,1,9.46,5.27Z"></path>
+    </symbol>
+    <symbol viewBox="0 0 27 18" id="vk">
+        <path d="M0,1.25C-.17.16,5.12.83,5.12.83S8.19,8.55,9.4,8.55,10,2,10,2s-1.5-.39-1.5-1S10,0,10,0h4.42c.53,0,.74.86.74,1.43v7H16.4S17.48,6.71,18.33,5,20.21.83,20.21.83h5.14s.94,0,.83.81C26,2.71,22.61,7.76,21.9,9.49c-.54,1.3,2.26,3.07,3.45,5a6,6,0,0,1,.83,2.66h-6.1L17,13.55a1.24,1.24,0,0,0-1.12.1,1.56,1.56,0,0,0-.52,1.09V17.1H10.61S7,15.85,3.86,10.37.18,2.35,0,1.25Z"></path>
+    </symbol>
+    <symbol viewBox="0 0 130 19" id="drive2">
+        <path d="M.93,17V.9H7.21a8.55,8.55,0,0,1,6.16,2.29A7.64,7.64,0,0,1,15.77,9a7.63,7.63,0,0,1-2.4,5.75A8.54,8.54,0,0,1,7.21,17Zm3.54-3.2H7.21a4.73,4.73,0,0,0,3.52-1.35A4.76,4.76,0,0,0,12.06,9a4.75,4.75,0,0,0-1.35-3.5A4.72,4.72,0,0,0,7.21,4.1H4.47Z"></path>
+        <path d="M18.92,17V.9h7.36A6.35,6.35,0,0,1,31,2.53a5,5,0,0,1,1.38,3.73,4.9,4.9,0,0,1-3.45,5L32.83,17H28.69l-3.5-5.15H22.46V17Zm3.54-8.28H26a2.91,2.91,0,0,0,2-.63,2.15,2.15,0,0,0,.71-1.69A2.06,2.06,0,0,0,28,4.68a3.21,3.21,0,0,0-2-.59H22.46Z"></path>
+        <path d="M35.71,17V.9h3.54V17Z"></path>
+        <path d="M48.4,17.12,41.89.9H45.8L50,12.24,54.22.9H58L51.53,17.12Z"></path>
+        <path d="M60.52,17V.9H72.67V4.05H64V7.32h7.59v3.15H64v3.38h8.74V17Z"></path>
+        <path d="M75.13,17V14.19L80.49,9.8a14.23,14.23,0,0,0,2.19-2.1,2.85,2.85,0,0,0,.6-1.76,2,2,0,0,0-.6-1.54,2.21,2.21,0,0,0-1.56-.55,2.81,2.81,0,0,0-1.62.5A8.43,8.43,0,0,0,77.82,6L75.34,4a9.27,9.27,0,0,1,2.61-2.53,6.52,6.52,0,0,1,3.39-.8,5.78,5.78,0,0,1,4,1.37,4.67,4.67,0,0,1,1.52,3.65A5.35,5.35,0,0,1,86.38,8a6.61,6.61,0,0,1-1.31,1.84,27.93,27.93,0,0,1-2.42,2l-2.62,2h7V17Z"></path>
+        <path d="M89.76,17V13.32h3.73V17Z"></path>
+        <path d="M96.84,17V.9h7.36a6.35,6.35,0,0,1,4.69,1.63,5,5,0,0,1,1.38,3.73,4.9,4.9,0,0,1-3.45,5L110.76,17h-4.14l-3.5-5.15h-2.74V17Zm3.54-8.28H104a2.92,2.92,0,0,0,2-.63,2.15,2.15,0,0,0,.71-1.69,2.06,2.06,0,0,0-.74-1.71,3.21,3.21,0,0,0-2-.59h-3.52Z"></path>
+        <path d="M120.19,17.25a7,7,0,0,1-5.13-1.83,7.19,7.19,0,0,1-1.84-5.33V.9h3.54V10a4.31,4.31,0,0,0,.91,3,3.25,3.25,0,0,0,2.56,1,3.31,3.31,0,0,0,2.56-1,4.11,4.11,0,0,0,.91-2.87V.9h3.54V10a7.28,7.28,0,0,1-1.87,5.43A7.09,7.09,0,0,1,120.19,17.25Z"></path>
+    </symbol>
+</svg>
+            <div class="popup__wrapper" id="callback">
+              <div class="popup__title">Обратный звонок</div>
+              <div class="popup__subtitle">Мы перезвоним вам#[br]в течение 5 минут</div>
+              <div class="popup__body">
+                <form>
+                        <div class="input">
+                          <input class="input__input" value="" required="">
+                          <label class="input__label">Ваше имя</label>
+                          <div class="input__error"></div>
+                        </div>
+                        <div class="input">
+                          <input class="input__input" value="" required="" type="tel">
+                          <label class="input__label">Номер телефона</label>
+                          <div class="input__error"></div>
+                        </div>
+                  <div class="center">
+                    <button class="button button--inline">ОТПРАВИТЬ ЗАЯВКУ</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="popup__wrapper" id="request">
+              <div class="popup__title">Обратный звонок</div>
+              <div class="popup__subtitle">Мы перезвоним вам в течение 5 минут</div>
+              <div class="popup__body">
+                <form>
+                  <div class="popup__row">
+                    <div class="popup__select">
+                      <select class="form__select" data-placeholder="Марка" name="brand" data-type="brand" disabled=""></select>
+                    </div>
+                    <div class="popup__select">
+                      <select class="form__select" data-placeholder="Модель" name="model" data-type="model" disabled=""></select>
+                    </div>
+                    <div class="popup__select">
+                      <select class="form__select" data-placeholder="Поколение" name="generation" data-type="generation" disabled=""></select>
+                    </div>
+                  </div>
+                  <div class="popup__row">
+                    <div class="popup__select">
+                      <select class="form__select" data-placeholder="Кузов" name="body" data-type="body" disabled=""></select>
+                    </div>
+                    <div class="popup__select">
+                      <select class="form__select" data-placeholder="Узел" name="part" data-type="part"></select>
+                    </div>
+                  </div>
+                        <div class="input">
+                          <input class="input__input" value="" required="">
+                          <label class="input__label">Ваше имя</label>
+                          <div class="input__error"></div>
+                        </div>
+                        <div class="input">
+                          <input class="input__input" value="" required="" type="tel">
+                          <label class="input__label">Номер телефона</label>
+                          <div class="input__error"></div>
+                        </div>
+                  <div class="center">
+                    <button class="button button--inline">ОТПРАВИТЬ ЗАЯВКУ</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="popup__wrapper" id="part">
+              <div class="popup__title">Узнать точную стоимость на</div>
+              <div class="popup__subtitle">Выберие вашу модель и введите контактые данные, мастер перезвонит вам и проконсультирует.</div>
+              <div class="popup__body">
+                <form>
+                  <div class="popup__row">
+                    <div class="popup__select">
+                      <select class="form__select" data-placeholder="Марка" name="brand" data-type="brand" disabled=""></select>
+                    </div>
+                    <div class="popup__select">
+                      <select class="form__select" data-placeholder="Модель" name="model" data-type="model" disabled=""></select>
+                    </div>
+                    <div class="popup__select">
+                      <select class="form__select" data-placeholder="Поколение" name="generation" data-type="generation" disabled=""></select>
+                    </div>
+                  </div>
+                  <div class="popup__row">
+                    <div class="popup__select">
+                      <select class="form__select" data-placeholder="Кузов" name="body" data-type="body" disabled=""></select>
+                    </div>
+                  </div>
+                        <div class="input">
+                          <input class="input__input" value="" required="">
+                          <label class="input__label">Ваше имя</label>
+                          <div class="input__error"></div>
+                        </div>
+                        <div class="input">
+                          <input class="input__input" value="" required="" type="tel">
+                          <label class="input__label">Номер телефона</label>
+                          <div class="input__error"></div>
+                        </div>
+                  <div class="center">
+                    <button class="button button--inline">ОТПРАВИТЬ ЗАЯВКУ</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+    </div>
+    <script>
+      var CATALOG_URL = {
+        brand:      '/catalogs/brands.json',
+        model:      '/catalogs/models.json',
+        generation: '/catalogs/generations.json',
+        body:       '/catalogs/bodies.json',
+        part:       '/catalogs/parts.json',
+      };
+    </script>
+  </body>
+  <script src="js/app.js"></script>
+</html>

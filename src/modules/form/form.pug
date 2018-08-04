@@ -1,0 +1,12 @@
+.form#form
+  h2.title Выберите автомобиль и запчасть
+  h3.subtitle После отправки заявки, мы перезвоним#[br]вам в течение 5 минут.
+  form.form__wrapper
+    .form__row
+      .form__item: select.form__select(data-placeholder='Марка' name='brand' data-type='brand' disabled)
+      .form__item: select.form__select(data-placeholder='Модель' name='model' data-type='model' disabled)
+      .form__item: select.form__select(data-placeholder='Поколение' name='generation' data-type='generation' disabled)
+    .form__row
+      .form__item: select.form__select(data-placeholder='Кузов' name='body' data-type='body' disabled)
+      .form__item: select.form__select(data-placeholder='Узел' name='part' data-type='part')
+      .form__item: .form__button: button.button ОТПРАВИТЬ ЗАЯВКУ

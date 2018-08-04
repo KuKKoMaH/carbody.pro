@@ -1,0 +1,28 @@
+extends pug/_layout
+
+block body
+  include modules/header/header
+  include modules/slide/slide
+  include modules/form/form
+  include modules/catalog/catalog
+  include modules/info/info
+  include modules/bullets/bullets
+  include modules/delivery/delivery
+  include modules/faq/faq
+  include modules/outpost/outpost
+  include modules/footer/footer
+
+  div.hidden
+    include img/inline-sprite.svg
+    include modules/popup/popup-callback
+    include modules/popup/popup-request
+    include modules/popup/popup-part
+
+  script.
+    var CATALOG_URL = {
+      brand:      '/catalogs/brands.json',
+      model:      '/catalogs/models.json',
+      generation: '/catalogs/generations.json',
+      body:       '/catalogs/bodies.json',
+      part:       '/catalogs/parts.json',
+    };
