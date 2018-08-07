@@ -14,20 +14,21 @@
     font-weight: 500
     padding: 20px 0px 8px
     margin-bottom: 30px
+    border-radius: 0
     anim()
     -webkit-appearance: none
     -moz-appearance: none
     appearance: none
 
-    &:focus,
-    &:valid,
-    &:disabled
+  &--focus
+    .input__input,
+    .input__textarea
       border-bottom: 3px solid #D5D5D5
-      & ~ .input__label
-        top: 6px
-        font-size: 11px
-        color: $green
 
+    .input__label
+      top: 6px
+      font-size: 11px
+      color: $green
 
   &__textarea
     resize: none

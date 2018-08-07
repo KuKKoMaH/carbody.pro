@@ -1,5 +1,17 @@
 import 'selectize';
 
+$('.input__input')
+  .on('focus', (e) => {
+    const $el = $(e.delegateTarget);
+    $el.parents('.input').addClass('input--focus');
+  })
+  .on('blur', (e) => {
+    const $el = $(e.delegateTarget);
+    setTimeout(() => {
+      if (!$el.val()) $el.parents('.input').removeClass('input--focus');
+    }, 0);
+  });
+
 if (!window.CATALOG_URL) throw new Error('CATALOG_URL not found.');
 
 var parentage = {
