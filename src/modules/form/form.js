@@ -54,16 +54,7 @@ $('.form__wrapper').on('submit', function (e) {
   var $popup = $("#request");
   var fields = getForm($form);
 
-  // $popup.find('.form__select').text(formatText(fields));
-  for (var key in fields) {
-    const $input = $popup.find('[name="' + key + '"]');
-    const selectize = $input.data('selectize');
-    if (selectize) {
-      selectize.setValue(fields[key])
-    } else {
-      $input.val(fields[key]);
-    }
-  }
+  console.log(fields);
 
   $.magnificPopup.open({
     items: {
@@ -71,6 +62,38 @@ $('.form__wrapper').on('submit', function (e) {
       src:  '#request'
     }
   });
+
+  var $brand = $popup.find('[name="brand"]').data('selectize');
+  var $model = $popup.find('[name="model"]').data('selectize');
+  var $generation = $popup.find('[name="generation"]').data('selectize');
+
+  if (fields.brand) {
+    $brand.setValue(fields.brand);
+
+    if (fields.model) {
+      var updateModel = function () {
+        $model.off('load', updateModel);
+        $model.setValue(fields.model);
+
+        if (fields.generation) {
+          var updateGeneration = function () {
+            $generation.off('load', updateGeneration);
+            $generation.setValue(fields.generation);
+          };
+          $generation.on('load', updateGeneration);
+        }
+      };
+      $model.on('load', updateModel);
+    }
+  }
+
+  var setField = function (key, value) {
+    var $input = $popup.find('[name="' + key + '"]').data('selectize');
+    $input.setValue(value);
+  };
+  if (fields.body) setField('body', fields.body);
+  if (fields.part) setField('part', fields.part);
+
   return false;
 });
 
